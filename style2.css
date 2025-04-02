@@ -1,0 +1,81 @@
+/* Apply Dark Blue Background */
+body {
+  background: #0d1b2a; /* Dark Blue */
+  font-family: 'Verdana', sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Bulletin Board Header */
+.header {
+  background-color: #1e3a5f; /* Deep Blue */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #ffcc00;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h2 {
+  color: #ffeb3b;
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+/* Sticky Notes Layout */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sticky Note Design */
+.card {
+  width: 250px;
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Different Background Colors for Sticky Notes */
+.card:nth-child(1) { background: #ffeb3b; } /* Yellow */
+.card:nth-child(2) { background: #ff5722; } /* Orange */
+.card:nth-child(3) { background: #4caf50; } /* Green */
+.card:nth-child(4) { background: #03a9f4; } /* Blue */
+.card:nth-child(5) { background: #e91e63; } /* Pink */
+.card:nth-child(6) { background: #9c27b0; } /* Purple */
+
+/* Hover Effect: Lift Sticky Note */
+.card:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Add a Pin Effect */
+.card::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
